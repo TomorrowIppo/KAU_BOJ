@@ -2,7 +2,7 @@
 using namespace std;
 
 // push_back, pop_back O(1)
-// push_front, pop_front O(N)
+// push_front, pop_front O(N) 단, vector에는 없는 없음
 
 int main(void) {
   vector<int> v1(3, 5); // {5,5,5};
@@ -39,7 +39,7 @@ for(int i = 0; i <= v1.size() - 1; i++)
     cout << v1[i] << ' ';
 
 기본적으로 vector의 size 메소드는 unsigned int 형태의 값을 반환하는데, 여기에 -1을 해버리면
-unsigned int와 int의 연산이 되는데, 이때 자동으로 unsigned int로 형변환된다. 
+unsigned int와 int의 연산이 되는데, 이때 자동으로 unsigned int 혹은 unsigned long long으로 형변환된다. 
 만약 v1이 빈 벡터였다면 언더플로우가 발생하게되어 해당 결과값은 -1이 아닌 4294967295가 되어버린다.
 
 */
