@@ -13,9 +13,8 @@ arr의 각 수는 0 이상 100 이하이고 N은 1000 이하이다.
 
 using namespace std;
 
-bool vis_num[1001];
-
 int func2(int arr[], int N) {
+    bool vis_num[1001] = {};
     for(int i = 0; i < N; i++)
     {
         if(vis_num[100 - arr[i]]) return 1;
